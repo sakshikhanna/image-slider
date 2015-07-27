@@ -1,9 +1,10 @@
 
 
-var ImageSlider = function( parentElementClass, childElementClass, speed ) {
+// var ImageSlider = function( parentElementClass, childElementClass, speed ) {
+var ImageSlider = function( defaults ) {
 
 	var options = {};
-
+	var settings = $.extend( defaults, options );
 	var currentActiveItem;
 	var action = -1;
 
@@ -11,9 +12,12 @@ var ImageSlider = function( parentElementClass, childElementClass, speed ) {
 	 * [setDefaultOptions description]
 	 */
 	function setDefaultOptions() {
-		parentElementClass = parentElementClass || '.is-parent-container';
-		childElementClass = childElementClass || '.is-child-container';
-		speed = speed || 500;
+		parentElementClass = settings.parentClass || '.is-parent-container';
+		childElementClass = settings.childClass || '.is-child-container';
+		speed = settings.speed || 500;
+		console.log('PC : '+parentElementClass);
+		console.log('CC : '+childElementClass);
+		console.log('speed : '+speed);
 
 		// ( parentElementClass == undefined ) 	? parentElementClass : '.is-parent-container';
 		// ( childElementClass == undefined ) 	? childElementClass : '.is-child-container';
