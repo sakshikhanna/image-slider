@@ -42,3 +42,6 @@ $( '.prev-button' ).on( 'click', function() {
 });
 
 ```
+# Licence
+
+Licensed under the MIT License.
