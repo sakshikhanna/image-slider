@@ -44,4 +44,4 @@ $( '.prev-button' ).on( 'click', function() {
 ```
 # Licence
 
-Licensed under the MIT License.
+Licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
